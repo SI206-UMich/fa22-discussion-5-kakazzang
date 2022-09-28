@@ -103,6 +103,8 @@ class TestAllMethods(unittest.TestCase):
 		self.assertEqual(w1.get_max_stock(), self.item4)
 		w1.items = [self.item1, self.item2]
 		self.assertEqual(w1.get_max_stock(), self.item2)
+		w1.items = [self.item1, self.item5]
+		self.assertEqual(w1.get_max_stock(), self.item5)
 		
 
 	# Check to see whether the warehouse correctly return the item with the highest price
@@ -114,6 +116,8 @@ class TestAllMethods(unittest.TestCase):
 		self.assertEqual(w1.get_max_price(), self.item2)
 		w1.items = [self.item1, self.item2]
 		self.assertEqual(w1.get_max_price(), self.item1)
+		w1.items = [self.item3, self.item4]
+		self.assertEqual(w1.get_max_price(), self.item4)
 		
 
 def main():
